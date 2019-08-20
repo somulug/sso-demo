@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "http://sso-server-service.cloud.somulu.com:8020",
+    "secure": false,
+    "logLevel": "debug"
+  }
+}
