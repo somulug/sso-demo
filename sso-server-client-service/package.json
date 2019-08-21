@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "classnames": "^2.2.5",
+    "dotenv-webpack": "^1.7.0",
     "jwt-decode": "^2.2.0",
     "moment": "^2.22.0",
     "react": "^16.3.1",
@@ -17,9 +18,12 @@
     "redux-thunk": "^2.2.0"
   },
   "scripts": {
-    "start": "set PORT=3020 && react-scripts start --proxy-config proxy.config.json",
+    "start": "set PORT=3020 && react-scripts start ",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "dotenv": "^8.1.0"
   }
 }

@@ -15,7 +15,7 @@ import Dashboard from "./components/dashboard/Dashboard";
 import NotFound from "./components/not-found/NotFound";
 
 import "./App.css";
-
+// require("dotenv").config();
 // Check for token
 if (localStorage.jwtToken) {
   // Set auth token header auth

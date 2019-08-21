@@ -1,13 +1,14 @@
 import axios from "axios";
 import setAuthToken from "../utils/setAuthToken";
 import jwt_decode from "jwt-decode";
-
 import { GET_ERRORS, SET_CURRENT_USER } from "./types";
-
+require("dotenv").config();
+console.log("Env", process.env.REACT_APP_BASE_URL);
+const domain = process.env.REACT_APP_BASE_URL;
 // Register User
 export const registerUser = (userData, history) => dispatch => {
   axios
-    .post("/api/users/register", userData)
+    .post(`${domain}/api/users/register`, userData)
     .then(res => history.push("/login"))
     .catch(err =>
       dispatch({
@@ -20,7 +21,7 @@ export const registerUser = (userData, history) => dispatch => {
 // Login - Get User Token
 export const loginUser = userData => dispatch => {
   axios
-    .post("/api/users/login", userData)
+    .post(`${domain}/api/users/login`, userData)
     .then(res => {
       // Save to localStorage
       const { token } = res.data;
